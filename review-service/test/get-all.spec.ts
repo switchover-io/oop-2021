@@ -6,9 +6,9 @@ import { handler } from '../src/get-all';
 
 const db = new DynamoDB.DocumentClient();
 
-const client = switchover.createClient();
+const client = switchover.createClient(); //the mock returns true as togglevalue
 
-test("bla", async ()=> {
+test("testing killswitch = true", async ()=> {
   
     const { body } = await handler();
 
